@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "index.scss",
+        "_mixins.scss",
+        "_base.scss",
+        "_reusableStyles.scss",
+        "_scrollToTop.scss",
+        "_navbar.scss",
+        "_hero.scss",
+        "_about.scss",
+        "_skills.scss",
+        "_portfolio.scss",
+        "_services.scss",
+        "_languages.scss",
+        "_contact.scss",
+        "_footer.scss",
+        "_mediaQueries.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
