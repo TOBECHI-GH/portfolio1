@@ -1,1 +1,78 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0b0b0b;
+  font-family: "Outfit", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+:root {
+  --gradient: linear-gradient (to right, #c5e35b, #45b649);
+}
+
+::-webkit-scrollbar {
+  background-color: #0b0b0b;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #45b649;
+}
+
+.gradient {
+  background: var(--gradient);
+}
+
+.defaultMargin {
+  margin: 0 14rem;
+}
+
+button {
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem 1.8rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#dce35b), to(#45b649));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #dce35b, #45b649);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-box-shadow: 2px 100px 1px #0b0b0b inset;
+          box-shadow: 2px 100px 1px #0b0b0b inset;
+  border: solid 4px transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 2rem 0;
+}
+/*# sourceMappingURL=index.css.map */

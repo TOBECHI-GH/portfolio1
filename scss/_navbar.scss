@@ -1,0 +1,12 @@
+// display flex : main axis (4 values) and cross axis. Direct children become flex items
+// alignments, justifications and space btw items are to be set on the flex container, not on the items themselves
+// The align-items property will align the items on the cross axis
+// justify-content property will align the items on the main axis
+// color: font color
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 2rem 0;
+}

@@ -1,0 +1,56 @@
+//google fonts import and css rule
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&family=Poppins:wght@400;700&display=swap");
+
+// css universal selector * selsects all the elements
+// box-sizing property defines if the width and height should include padding and border
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// smooth scroll behaviuor property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.
+// please note that the initial property is used to set the default value to an element
+// please note that the inherit property is used to set the value from its parent element
+// overflow property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+// hidden : The overflow is clipped, and the rest of the content will be invisible
+// overflow-x : for left and right edges
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0b0b0b;
+  font-family: "Outfit", sans-serif;
+}
+
+// list style type property
+ul {
+  list-style-type: none;
+}
+
+// root selector matches the root element of a tree representing the document. In HTML, it is the <html> element
+// saas varible is a way to store information so you can use later
+// css linear gradient function () sets a linear gradient as the background image. If direction is not specified, it is from top to bottom. Here its from left to right
+// css variable. Any variable declared inside the :root selector is global, otherwise it is local
+
+:root {
+  --gradient: linear-gradient (to right, #c5e35b, #45b649);
+}
+
+// The ::-webkit-scrollbar CSS pseudo-element affects the style of an element's scrollbar when it has overflow:scroll; set
+
+::-webkit-scrollbar {
+  background-color: #0b0b0b;
+  width: 0.3rem;
+}
+
+// webkit-scrollbar-thumb is the the draggable scrolling handle.
+
+::-webkit-scrollbar-thumb {
+  background-color: #45b649;
+}
