@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-// smooth scroll behaviuor property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.
+// smooth scroll behaviour property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.
 // please note that the initial property is used to set the default value to an element
 // please note that the inherit property is used to set the value from its parent element
 // overflow property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
@@ -39,7 +39,7 @@ ul {
 // css variable. Any variable declared inside the :root selector is global, otherwise it is local
 
 :root {
-  --gradient: linear-gradient (to right, #c5e35b, #45b649);
+  --gradient: linear-gradient(to right, #dce35b, #45b649);
 }
 
 // The ::-webkit-scrollbar CSS pseudo-element affects the style of an element's scrollbar when it has overflow:scroll; set
@@ -50,6 +50,8 @@ ul {
 }
 
 // webkit-scrollbar-thumb is the the draggable scrolling handle.
+//: pseudo classes
+//:: pseudo elements
 
 ::-webkit-scrollbar-thumb {
   background-color: #45b649;

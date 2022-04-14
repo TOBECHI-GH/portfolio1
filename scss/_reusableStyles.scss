@@ -1,3 +1,5 @@
+//The var() function is used to insert the value of a CSS variable.
+
 .gradient {
   background: var(--gradient);
 }
@@ -35,3 +37,72 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
+// Idea of coil is that if height is not stated, it will be zero and the origin of the div is on the horizontal axis (center). The border-top will also be at the center
+.spring {
+  display: flex;
+  align-items: center;
+  margin: 6rem 0;
+  .coil {
+    border-top: white dashed 0.1rem;
+    width: 49.75%;
+  }
+  .bar {
+    width: 0.5%;
+    height: 7rem;
+  }
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+// .right is for bar and coil
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+  text-align: center;
+  h2 {
+    color: white;
+  }
+  p {
+    color: rgb(153, 153, 153);
+  }
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: rgb(129, 128, 128);
+}
+
+.design {
+  position: relative;
+  .background {
+    height: 10rem;
+    width: 12rem;
+    background: linear-gradient(to right, #dce35b, #45b649);
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: -8px;
+  }
+}
+
+.right-box {
+  .background {
+    top: auto;
+    left: auto;
+    right: -10px;
+    bottom: -8px;
+  }
+}
+
+// Just buy puting the .right-box {.background} down, the CSS cascading works and takes preference. If it were before .design {.background}, the right-box will be up
+// top and left: auto : 	Lets the browser calculate the top edge position. This is default
+// We used auto to reset the box to its normal position and remove the inherited value

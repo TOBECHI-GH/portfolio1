@@ -1,0 +1,69 @@
+.portfolio {
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    gap: 2rem;
+    .portfolio_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      background-color: #181818;
+      padding: 2rem;
+      text-align: center;
+      .image {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        display: block;
+        border-radius: 1px;
+        position: relative;
+        margin: 0 auto;
+        //border: red solid 3px;
+        img {
+          width: 100%;
+          height: auto;
+          z-index: 2;
+          top: 0%;
+          left: 0%;
+          position: absolute;
+          // transition: top 3s;
+          // -webkit-transition: bottom 3s;
+          // -moz-transition: bottom 3s;
+          // -ms-transition: bottom 3s;
+          // -o-transition: bottom 3s;
+          &:hover {
+            top: -300%;
+            transition: all 3s;
+            -webkit-transition: all 3s;
+            -moz-transition: all 3s;
+            -ms-transition: all 3s;
+            -o-transition: all 3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+// hidden - The overflow is clipped, and the rest of the content will be invisible
+// auto - Similar to scroll, but it adds scrollbars only when necessary
+// Note overflow property only works for block elements with a given height
+// The display property specifies the display behavior (the type of rendering box) of an element.
+// inline-block : Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+// inline : Displays an element as an inline element (like <span>). Any height and width properties will have no effect
+// block : Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width
+// The grid-template-columns property specifies the number (and the widths) of columns in a grid layout.
+// height: auto; the element will automatically adjust its height to allow its content to be displayed correctly.
+// Specifying auto as the second parameter basically tells the browser to automatically determine the left and right margins itself,
+
+//CSS transitions let you decide which properties to animate (by listing them explicitly),
+//when the animation will start (by setting a delay), how long the transition will last (by setting a duration),
+//and how the transition will run (by defining a timing function, e.g. linearly or quick at the beginning, slow at the end).
+
+//transition-property : Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
+//transition-duration : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
+//transition-timing-function : Specifies a function to define how intermediate values for properties are computed.
+//transition-delay

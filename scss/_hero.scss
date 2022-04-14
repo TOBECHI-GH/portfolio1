@@ -1,0 +1,51 @@
+// Flex-start Items are positioned at the beginning of the container (top)
+// The align-items and align-self properties control alignment of our flex items on the cross axis, down the columns if flex-direction is row and along the row if flex-direction is column.
+// vh and vw allow to size elements and font sizes as a percentage of the total width or height of the user’s screen. Note: This stays true when the viewport is resized
+// Note: Viewport units are great to help create hero sections that take up the exact height of the viewport.
+// The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+// cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+
+// Please note that justify-content is only for the main-axis. Items are treated as a group on the main-axis
+// Please note that there are two property to align on the cross-axis (1) align-self (2) align-items
+// align-items : controls alignment of all items on the cross axis.
+// align-self : controls alignment of an individual flex item on the cross axis.
+// align-content : If you have a *wrapped multiple-line flex container then you might also want to use the align-content property to control the distribution of space between the rows. Still for only cross-axis.
+// Justify-items is for CSS Grid
+// Flex-direction column reverses the position of the cross and main axis. Flex direction row is default and normal
+// direction (ltr, rtl) is different from flex-direction
+// row-reverse wiil swap the normal row. Start will become end and end will become start. Then the items will go and start on the start end. justify content (say end) will find the current end
+// gap is shorthand for row-gap and column-gap
+// The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines.
+// nowrap: The flex items are laid out in a single line which may cause the flex container to overflow.
+// wrap: The flex items break into multiple lines.
+// wrap-reverse: Behaves the same as wrap but cross-start and cross-end are permuted.
+
+.hero {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+  height: 60vh;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    .title {
+      h1 {
+        @include gradientText;
+        font-size: 6vw;
+      }
+    }
+  }
+  .image {
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      height: 85vh;
+      width: 50vw;
+      object-fit: cover;
+    }
+  }
+}

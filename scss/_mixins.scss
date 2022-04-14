@@ -1,0 +1,13 @@
+// mixins and @include
+// mixins allow you to define styles that can be re-used throughout your stylesheet
+// They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries
+// The background-clip CSS property sets whether an element's background extends underneath its border box, padding box, or content box
+// text value of background clip: The background is painted within (clipped to) the foreground text
+// webkit-text-fill-color is same as color but it takes higher precedence
+
+@mixin gradientText {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

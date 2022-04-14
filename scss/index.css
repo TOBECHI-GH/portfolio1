@@ -21,7 +21,7 @@ ul {
 }
 
 :root {
-  --gradient: linear-gradient (to right, #c5e35b, #45b649);
+  --gradient: linear-gradient(to right, #dce35b, #45b649);
 }
 
 ::-webkit-scrollbar {
@@ -62,6 +62,86 @@ button {
   cursor: pointer;
 }
 
+.spring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6rem 0;
+}
+
+.spring .coil {
+  border-top: white dashed 0.1rem;
+  width: 49.75%;
+}
+
+.spring .bar {
+  width: 0.5%;
+  height: 7rem;
+}
+
+.right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.title_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.title_container h2 {
+  color: white;
+}
+
+.title_container p {
+  color: #999999;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: #818080;
+}
+
+.design {
+  position: relative;
+}
+
+.design .background {
+  height: 10rem;
+  width: 12rem;
+  background: -webkit-gradient(linear, left top, right top, from(#dce35b), to(#45b649));
+  background: linear-gradient(to right, #dce35b, #45b649);
+  position: absolute;
+  z-index: -1;
+  left: -10px;
+  top: -8px;
+}
+
+.right-box .background {
+  top: auto;
+  left: auto;
+  right: -10px;
+  bottom: -8px;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,5 +154,265 @@ button {
           align-items: center;
   color: white;
   padding: 2rem 0;
+}
+
+.navbar .brand_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .brand_container .brand h2 span {
+  margin: left 0.5em;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  color: #45b649;
+}
+
+.navbar .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.navbar .links ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar .links ul li a:hover {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar .links ul li i:hover {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar .links ul button {
+  padding: 0.5rem;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  overflow: hidden;
+  height: 60vh;
+}
+
+.hero .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.hero .content .title h1 {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6vw;
+}
+
+.hero .image {
+  position: relative;
+}
+
+.hero .image img {
+  position: absolute;
+  bottom: 0;
+  height: 85vh;
+  width: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.about .container .image img {
+  height: 25rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .container .play {
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+}
+
+.about .container .play i {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10rem;
+}
+
+.skills .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.skills .content .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+.circular .inner {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #0b0b0b;
+  border-radius: 100%;
+}
+
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 12;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #999999;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--gradient);
+  border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+  -webkit-transform: rotate(250deg);
+          transform: rotate(250deg);
+}
+
+.three .bar {
+  clip: rect(40px, 100px, 100px, 30px);
+}
+
+.two .bar,
+.four .bar {
+  clip: unset;
+}
+
+.portfolio {
+  position: relative;
+}
+
+.portfolio .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  color: white;
+  gap: 2rem;
+}
+
+.portfolio .container .portfolio_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background-color: #181818;
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio .container .portfolio_container .image {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  display: block;
+  border-radius: 1px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.portfolio .container .portfolio_container .image img {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+}
+
+.portfolio .container .portfolio_container .image img:hover {
+  top: -300%;
+  transition: all 3s;
+  -webkit-transition: all 3s;
+  -moz-transition: all 3s;
+  -ms-transition: all 3s;
+  -o-transition: all 3s;
 }
 /*# sourceMappingURL=index.css.map */

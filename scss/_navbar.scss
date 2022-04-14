@@ -1,12 +1,53 @@
 // display flex : main axis (4 values) and cross axis. Direct children become flex items
 // alignments, justifications and space btw items are to be set on the flex container, not on the items themselves
-// The align-items property will align the items on the cross axis
-// justify-content property will align the items on the main axis
+// The align-items property will align the items on the cross axis (Vertical)
+// justify-content property will align the items on the main axis (Horizontal)
 // color: font color
+// grid lines are the most important thing in CSS grid
+// Note: Justify-items is for display : grid while justify-content is for display : flex
+// vertical-align property to align text and icon
+// With width: 100% , an img ’s width will be equal to its parent’s width.
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   padding: 2rem 0;
+  .brand_container {
+    display: flex;
+    .brand {
+      h2 {
+        span {
+          margin: left 0.5em;
+          font-size: 0.9rem;
+          letter-spacing: 0.1rem;
+          color: #45b649;
+        }
+      }
+    }
+  }
+  .links {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      li {
+        a {
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            @include gradientText;
+          }
+        }
+        i {
+          &:hover {
+            @include gradientText;
+          }
+        }
+      }
+      button {
+        padding: 0.5rem;
+      }
+    }
+  }
 }

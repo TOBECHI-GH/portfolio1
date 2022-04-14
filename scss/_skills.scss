@@ -1,0 +1,80 @@
+.skills {
+  .content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  //border: blue solid 5px;
+  .inner {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: #0b0b0b;
+    border-radius: 100%;
+    //border: red solid 5px;
+  }
+  .number {
+    //border: white solid 5px;
+    //width: 100%;
+    // height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(153, 153, 153);
+  }
+  .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--gradient);
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+    transform: rotate(250deg);
+  }
+}
+
+// class inner have a % width and height relative to the circular class
+// class bar have a % width and height relative to the circle class
+// To center the inner class div within the circular div we used absolute (top and left 50% 0f 100px) and -40px margin for top and left
+// Also bar class is positioned relative to circular not its direct parent circle
+// Please be careful using percentage and absolute. Because we used absolute positioning relative to Circular, it changed the 50% from refrencing circle to circular. Just know that the % will reference the element bearing the relative position
+// The clip property lets you specify a rectangle to clip an absolutely positioned element.
+// The rectangle is specified as four coordinates, all from the top-left corner of the element to be clipped.
+// translate (x,y) - 2D translation
+// A percentage value refers to the width of the reference box defined by the transform-box property.
+// rotate () - 2D rotation, angle
+// Note: Z-index will check 2 absolute elements order
+
+.three {
+  .bar {
+    clip: rect(40px, 100px, 100px, 30px);
+  }
+}
+
+.two,
+.four {
+  .bar {
+    clip: unset;
+  }
+}
