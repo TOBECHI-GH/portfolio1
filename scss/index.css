@@ -390,7 +390,7 @@ p {
 
 .portfolio .container .portfolio_container .image {
   width: 250px;
-  height: 250px;
+  height: 150px;
   overflow: hidden;
   display: block;
   border-radius: 1px;
@@ -401,18 +401,20 @@ p {
 .portfolio .container .portfolio_container .image img {
   width: 100%;
   height: auto;
-  z-index: 2;
+  z-index: 0;
   top: 0%;
   left: 0%;
   position: absolute;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: bottom 3s;
+  -webkit-transition: top 3s;
+  transition: top 3s;
 }
 
 .portfolio .container .portfolio_container .image img:hover {
   top: -300%;
-  transition: all 3s;
   -webkit-transition: all 3s;
-  -moz-transition: all 3s;
-  -ms-transition: all 3s;
-  -o-transition: all 3s;
+  transition: all 3s;
 }
 /*# sourceMappingURL=index.css.map */

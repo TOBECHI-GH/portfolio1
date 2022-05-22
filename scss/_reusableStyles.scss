@@ -56,7 +56,6 @@ button {
 .right {
   flex-direction: row-reverse;
 }
-
 // .right is for bar and coil
 
 .title_container {
@@ -91,11 +90,14 @@ p {
     z-index: -1;
     left: -10px;
     top: -8px;
+    //border: 5px solid red;
   }
 }
 
 .right-box {
+  //position: relative;
   .background {
+    //position: absolute;
     top: auto;
     left: auto;
     right: -10px;
@@ -103,6 +105,10 @@ p {
   }
 }
 
+// right-box is for the green boxes
+
 // Just buy puting the .right-box {.background} down, the CSS cascading works and takes preference. If it were before .design {.background}, the right-box will be up
 // top and left: auto : 	Lets the browser calculate the top edge position. This is default
 // We used auto to reset the box to its normal position and remove the inherited value
+
+// You don't need to indicate position relative and absolute in sass nesting

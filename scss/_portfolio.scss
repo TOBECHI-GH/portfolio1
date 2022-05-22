@@ -15,7 +15,7 @@
       text-align: center;
       .image {
         width: 250px;
-        height: 250px;
+        height: 150px;
         overflow: hidden;
         display: block;
         border-radius: 1px;
@@ -25,22 +25,25 @@
         img {
           width: 100%;
           height: auto;
-          z-index: 2;
+          z-index: 0;
           top: 0%;
           left: 0%;
           position: absolute;
-          // transition: top 3s;
-          // -webkit-transition: bottom 3s;
-          // -moz-transition: bottom 3s;
-          // -ms-transition: bottom 3s;
-          // -o-transition: bottom 3s;
+          margin: 0;
+          padding: 0;
+          //transition: top 3s;
+          -webkit-transition: bottom 3s;
+          -moz-transition: bottom 3s;
+          -ms-transition: bottom 3s;
+          -o-transition: bottom 3s;
+          transition: top 3s;
           &:hover {
             top: -300%;
-            transition: all 3s;
             -webkit-transition: all 3s;
             -moz-transition: all 3s;
             -ms-transition: all 3s;
             -o-transition: all 3s;
+            transition: all 3s;
           }
         }
       }
@@ -48,6 +51,7 @@
   }
 }
 
+// Activated means clicked
 // hidden - The overflow is clipped, and the rest of the content will be invisible
 // auto - Similar to scroll, but it adds scrollbars only when necessary
 // Note overflow property only works for block elements with a given height
@@ -66,4 +70,25 @@
 //transition-property : Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
 //transition-duration : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
 //transition-timing-function : Specifies a function to define how intermediate values for properties are computed.
-//transition-delay
+//transition-delay : Defines how long to wait between the time a property is changed and the transition actually begins.
+
+//transition: <property> <duration> <timing-function> <delay>
+
+// :nth-child : Applies when an element is the n-th element of its parent, where n can be an integer, a mathematical expression (e.g n+3) or the keywords odd or even
+// :nth-of-type : Applies when an element is the n-th element of its parent of the same element type, where n can be an integer, a mathematical expression (e.g n+3) or the keywords odd or even.
+// & = Saas Ampersand used when nesting. The & always refers to the parent selector when nesting.
+
+// Note when using pseudo-classes don't put space between it and the selector
+
+// -webkit-transition: bottom 3s;
+// -moz-transition: bottom 3s;
+// -ms-transition: bottom 3s;
+// -o-transition: bottom 3s;
+
+// Cross browser compatibility for older browsers
+
+// Transition cascades
+
+// Transition will not work without position absolute
+
+// position absolute will displace an element, use top and left 0 to set it back in place

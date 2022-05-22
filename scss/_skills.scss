@@ -54,6 +54,9 @@
   }
 }
 
+// CSS transforms are based on the size of the elements
+// If you take an element out of normal document flow with absolute, it will start at the top left of its parent container positioned relative.
+// Then to center it, you can set the top and left to 50% and then the transition of (X, Y) to
 // class inner have a % width and height relative to the circular class
 // class bar have a % width and height relative to the circle class
 // To center the inner class div within the circular div we used absolute (top and left 50% 0f 100px) and -40px margin for top and left
