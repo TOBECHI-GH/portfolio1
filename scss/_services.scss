@@ -1,0 +1,30 @@
+.services {
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .service {
+      background-color: #181818;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      //border: blue solid 3px;
+      gap: 2rem;
+      align-items: center;
+      text-align: center;
+      //height: auto;
+      margin-bottom: 0;
+      i {
+        @include gradientText;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// display grid is giving the last item a space in its parent container
+// CSS grid is the problem
+// The service container is resizing based on the content of the p tag
+// How to give flex container same height reardless of content
+// Problem might be from media queries for laptop screen

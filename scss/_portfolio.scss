@@ -13,6 +13,7 @@
       background-color: #181818;
       padding: 2rem;
       text-align: center;
+      //border: blue solid 3px;
       .image {
         width: 250px;
         height: 150px;
@@ -51,6 +52,7 @@
   }
 }
 
+// margin 0, auto is for centering elements but will work for only block level elements (span will not work unless made a block level element)
 // Activated means clicked
 // hidden - The overflow is clipped, and the rest of the content will be invisible
 // auto - Similar to scroll, but it adds scrollbars only when necessary

@@ -43,6 +43,7 @@ button {
   display: flex;
   align-items: center;
   margin: 6rem 0;
+  //border: solid 2px red;
   .coil {
     border-top: white dashed 0.1rem;
     width: 49.75%;
@@ -82,6 +83,7 @@ p {
 
 .design {
   position: relative;
+  //border: solid 3px green;
   .background {
     height: 10rem;
     width: 12rem;
@@ -94,21 +96,58 @@ p {
   }
 }
 
+// Solution to problem below
+
+.design {
+  .service {
+    height: 100%;
+  }
+}
+
+.design {
+  .portfolio_container {
+    height: 100%;
+  }
+}
+
 .right-box {
-  //position: relative;
+  position: relative;
+  //border: 5px solid red;
   .background {
     //position: absolute;
     top: auto;
     left: auto;
     right: -10px;
     bottom: -8px;
+    //border: 5px solid blue;
   }
 }
 
 // right-box is for the green boxes
 
 // Just buy puting the .right-box {.background} down, the CSS cascading works and takes preference. If it were before .design {.background}, the right-box will be up
+// Note: Cascading will only effect the same css property before it
 // top and left: auto : 	Lets the browser calculate the top edge position. This is default
 // We used auto to reset the box to its normal position and remove the inherited value
 
 // You don't need to indicate position relative and absolute in sass nesting
+
+// For the left box (design >> background), we use position absolute and then left and top. For right box (right-box >> background), we first reset te leftand right
+// values from left box with auto (browser calculation), and then add the right and bottom positions.
+// If you do not give a div a height, and add contents in it, it will be flat. A div will always have a width like the screen size
+// input is an inline element
+// p[class] = matches any p element with an attribute called class
+
+// When using percentages, the size of the box is relative to the size of the browser window, or if encased in another box, it is a percentage of the size of the containing box.
+// NOTE: When you use em, the size of the box is based on the size of the text within it.
+// min-width and max-width are used for limiting width
+// min-width : Specifies the smallest size a box can be displayed at when the browser window is narrow
+// max-width : Specifies the maximum width a box can stretch to when the browser window is wide
+// max-width to ensure the text do not appear too wide within a big browser window and min-width to ensure the text do not appear too narrow
+// min-height, max-height, and overflow property:
+
+// Please NOTE: Percentage value for font-size or text is different for box.....for text, it is relative to default 16px, while for box, it is relative to screen size or containing box
+
+// inline: This causes a block-level element to act like an inline element
+// block: This causes an inline element to act like a block-level element
+// inline-block: This causes a block-level element to flow like an inline element, whileretaining other features of a block-level element

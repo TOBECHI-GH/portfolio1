@@ -51,3 +51,14 @@
     }
   }
 }
+
+// Percentage based padding works based on an elements width
+// Inline elements such as span do no accept width or height (Only block or inline-block)
+// When a fixed width is used on an element, there is a high probability that it will cause horizontal scrolling in mobile
+// Using max-width is better as it will prevent the element from being wider than the viewport
+// But.......By default, an HTML img will be sized according to its content. To prevent an image from being larger than the viewport, we can set the width property.
+// With width: 100%, an img's width will be equal to its parent's width.
+// However, sometimes we do not want that behaviour. There is a better alternative, which is to set max-width.
+// max-width: 100% and height: auto
+// This method ensures that a small image (650 by 250 px) won't take up the full width of a wide parent (say, 1500px). It would look pixelated if it did.
+// On the other hand, if an image is wider that the viewport, then its would be equal to 100% of its parent.

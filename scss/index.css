@@ -8,7 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -133,6 +132,18 @@ p {
   z-index: -1;
   left: -10px;
   top: -8px;
+}
+
+.design .service {
+  height: 100%;
+}
+
+.design .portfolio_container {
+  height: 100%;
+}
+
+.right-box {
+  position: relative;
 }
 
 .right-box .background {
@@ -416,5 +427,91 @@ p {
   top: -300%;
   -webkit-transition: all 3s;
   transition: all 3s;
+}
+
+.services {
+  position: relative;
+}
+
+.services .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.services .container .service {
+  background-color: #181818;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.services .container .service i {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.languages .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+}
+
+.languages .container .language img {
+  height: 7rem;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.languages .container .language img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.languages .container .language:nth-of-type(4) img {
+  -webkit-filter: grayscale(100) invert(1);
+          filter: grayscale(100) invert(1);
+}
+
+.languages .container .language:nth-of-type(4) img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem 20rem;
+  gap: 3rem;
+}
+
+.contact .right .img {
+  height: 30rem;
+  width: 26rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=index.css.map */

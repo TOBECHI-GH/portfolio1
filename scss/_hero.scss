@@ -11,7 +11,7 @@
 // align-self : controls alignment of an individual flex item on the cross axis.
 // align-content : If you have a *wrapped multiple-line flex container then you might also want to use the align-content property to control the distribution of space between the rows. Still for only cross-axis.
 // Justify-items is for CSS Grid
-// Flex-direction column reverses the position of the cross and main axis. Flex direction row is default and normal
+// *Flex-direction column reverses the position of the cross and main axis. Flex direction row is default and normal
 // direction (ltr, rtl) is different from flex-direction
 // row-reverse wiil swap the normal row. Start will become end and end will become start. Then the items will go and start on the start end. justify content (say end) will find the current end
 // gap is shorthand for row-gap and column-gap
