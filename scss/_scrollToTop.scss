@@ -1,0 +1,108 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  //border: 2px solid red;
+  background-color: #303030;
+  z-index: 20;
+  padding: 1rem 1.3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  i {
+    @include gradientText;
+    font-size: 1.5rem;
+  }
+}
+
+// Default position of a div is the top left
+// box-shadow: By default, the shadow is treated as a drop shadow. The inset keyword draws the shadow inside the frame/border
+
+// Common properties automatically inherited are: font, color, text-align, line-height.
+
+//Clipping and Masking
+
+//Clipping: Clips are vector paths. Outside of this path the element will be transparent (not visible), inside its opaque (visible). Example of clip-path is circle(), polygon(), ellipse ()
+// Black means that the region is opaque, and white that it is transparent, but there is also a grey area which is semi-transparent
+// clip-path: circle(100px at center): The element will only be visible inside of this circle, which is positioned at the center of the element and has a radius of 100px
+
+//Masking: Making is similar to Clips, but instead of defining a path, you mask what layers over the element.
+// You can imagine this mask as an image that consists of mainly two colors: black and white.
+
+//Transitions (css property and duration) (when and to what) all on one html tag
+
+//(css property and duration)
+// div {
+//   width: 150px;
+//   height: 150px;
+//   background-color: red;
+//   transition: background-color 1s;
+// }
+
+//(when and to what)
+// div :hover {
+//   background-color: green;
+// }
+
+//Cubic-bezier
+// The cubic-bezier function is a transition timing function which is often used for custom and smooth transitions.
+// transition-timing-function : cubic-bezier (0.1, 0.7, 1.0, 0.1);
+// The function takes four parameters:
+// cubic-bezier(P1_x, P1_y, P2_x, P2_y)
+// cubic-bezier(x,y ,x,y) //For only P1 and P2. Note: A bezier curve has 4 points P0, P1, P2, and P3
+// These parameters will be mapped to points which are part of a Bezier curve
+// For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at (0,0) and P3 is at (1,1), which menas that the
+// parameters passed to the cubic-bezier function can only be between 0 and 1.
+//Since cubic-bezier is the most flexible transition in CSS, you can translate all other transition timing function to
+// cubic-bezier functions:
+
+// ease-in-out: cubic-bezier(0.42, 0.0, 0.58, 1.0)
+
+// Transition has four longhand
+// transition-property
+// transition-duration
+// transition-timing-function
+// transition-delay
+
+// (1) transition-property: specifies the CSS properties the transition effect is for
+// (2) transition-duration: specifies the length of time a transition takes to complete.
+// (3) transition-timing-function: specifies the speed curve of the transition effect. A linear value indicates the transition will have the same speed from start to finish.
+// (4) transition-delay: specifies the amount of time needed to wait before the transition effects start.
+
+// Animations with the transition property
+// transition: all 400ms ease
+// The all value applies the transition to all compatible (number-based) properties. Any compatible property name (such as height or top) can be substituted for this keyword
+// transition: all 400ms ease;    ease means slow, speed up then end slow again
+
+// Vendor prefixes : for earlier versions of Mozilla Firefox and Webkit-based browsers
+// transition : all 400ms ease
+//  -moz transition: all 400ms ease
+//  -webkit-transition: all 400ms ease
+
+// Please note: The transition property cannot transition between a number and a default or automatic value, such as transitioning an element's height from 100px to auto.
+
+// Animations
+
+// Animations with keyframes
+// For multi-stage CSS animations, you can create CSS @keyframes. Keyframes allow you to define multiple animation points, called a keyframe, to decide more complex animations
+
+// @keyframes rainbow-backgraound {
+//  0% {background-color: #ff0000;}
+//  8.333% {background-color: #ff8000;}
+//  16.667% {background-color: #ffff00;}
+//  25.000% {background-color: #80ff00;}
+// }
+
+// .RainbowBackground{
+//   animation: rainbow-background 5s infinite;
+// }
+
+// Things to note. First the actual @keyframes syntax
+// @keyframes rainbow-background {}
+// This sets the name of the animation to rainbow-backround
+
+// 0% {background-color: #ff0000;}
+// This is the definition of the keyframe within the animation. The first part, the 0% in this case, defines where the keyframe is
+// during the animation. The 0% implies it is 0% of the total animation time from the beginning.
+
+// The animation will automatically transition between keyframes. So, by setting the next background color at 8.333%, the animation will
+// smoothly take 8.333% of the time to transition between those keyframes.

@@ -25,6 +25,9 @@
         }
       }
     }
+    .toggle {
+      display: none;
+    }
   }
   .links {
     ul {
@@ -52,6 +55,78 @@
   }
 }
 
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  right: 0 !important;
+}
+
+.responsive_navbar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 100%;
+  //border: 3px solid purple;
+  width: 70%;
+  background-color: black;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out;
+  color: white;
+  padding: 3rem 0;
+  .brand {
+    //display: flex;
+    margin-bottom: 1rem;
+    h2 {
+      font-size: 1.2rem;
+      span {
+        margin: left 0.5em;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        color: #45b649;
+      }
+    }
+  }
+  .links {
+    //border: 2px solid blue;
+    ul {
+      margin: 2vw;
+      //border: 2px solid red;
+      li {
+        margin: 2vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            @include gradientText;
+          }
+        }
+        i {
+          &:hover {
+            @include gradientText;
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        //border: 3px solid purple;
+        //justify-content: flex-start;
+      }
+      // ul {
+      //   display: flex;
+      // }
+    }
+  }
+}
+
+// Opacity: 1 is opaque (i.e, you cannot see through it) and 0 is entirely transparent (i.e, you can see through it)
+
 // Percentage based padding works based on an elements width
 // Inline elements such as span do no accept width or height (Only block or inline-block)
 // When a fixed width is used on an element, there is a high probability that it will cause horizontal scrolling in mobile
@@ -62,3 +137,9 @@
 // max-width: 100% and height: auto
 // This method ensures that a small image (650 by 250 px) won't take up the full width of a wide parent (say, 1500px). It would look pixelated if it did.
 // On the other hand, if an image is wider that the viewport, then its would be equal to 100% of its parent.
+
+// In the largest screen size (greater than laptop size), remove hide the toggle class (bars icon) with display none
+
+// They are basically designing for responsive first in the responsive_navbar class
+
+// They used -ve offset, visibility hidden, and opacity 0 (transparent) to hide the responsive_navbar class. Note: This will still visible in the largest screen if not for visibility and opacity, as this is not in the mediaquery.

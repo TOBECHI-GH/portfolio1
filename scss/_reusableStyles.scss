@@ -38,6 +38,8 @@ button {
   cursor: pointer;
 }
 
+// NOTE: A button's content is centered by default, so no need for justify-content center. But an a element is not.
+
 // Idea of coil is that if height is not stated, it will be zero and the origin of the div is on the horizontal axis (center). The border-top will also be at the center
 .spring {
   display: flex;
@@ -146,7 +148,7 @@ p {
 // max-width to ensure the text do not appear too wide within a big browser window and min-width to ensure the text do not appear too narrow
 // min-height, max-height, and overflow property:
 
-// Please NOTE: Percentage value for font-size or text is different for box.....for text, it is relative to default 16px, while for box, it is relative to screen size or containing box
+// PLEASE NOTE: Percentage value for font-size or text is different for box.....for text, it is relative to default 16px, while for box, it is relative to screen size or containing box
 
 // inline: This causes a block-level element to act like an inline element
 // block: This causes an inline element to act like a block-level element

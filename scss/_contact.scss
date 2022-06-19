@@ -2,16 +2,51 @@
   display: flex;
   margin: 4rem 20rem;
   gap: 3rem;
+  //border: solid 3px purple;
   .right {
-    .img {
+    //border: solid 3px blue;
+    img {
       height: 30rem;
       width: 26rem;
       object-fit: cover;
     }
   }
+  .left {
+    //border: solid 3px red;
+    .title {
+      .bar {
+        height: 0.5rem;
+        width: 5rem;
+        background: var(--gradient);
+        margin-bottom: 1rem;
+      }
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem 0;
+      gap: 1rem;
+      input {
+        padding: 0.8rem 9rem 0.8rem 1rem;
+        background-color: transparent;
+        border: 1px solid rgb(129, 128, 128);
+        color: white;
+        //width: 100%;
+      }
+    }
+  }
 }
 
-// object-fit : cover is
+// override defaultmargin
+
+// You can use padding right to increase the width of an input field
+
+// Input is inheriting width value from form, which in turn is inheriting from left flex container
+
+// object-fit property is used to specify how an img or video should be resized to fit its container
+// cover value : the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
 
 // font : family/typeface (serif, monospace), weight (bold, light, medium), style (intalic, oblique) and size (px, %, em values)
 // NOTE: An em is the equivalent to the width of a letter m.
@@ -22,3 +57,5 @@
 
 // font-family should end with a generic one
 // If a font name is made up of more than one word, it should be put in double quotes.
+
+// Use a fixed width to prevent auto resizing of a div. Again, if you do not give an empty div a height, it will be flat like it does not exist.

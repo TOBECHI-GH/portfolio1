@@ -4,7 +4,11 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    //border: 3px solid purple;
     .image {
+      //border: 3px solid red;
+      //height: 50rem;
+      //width: 60rem;
       img {
         height: 25rem;
         width: 50rem;
@@ -14,6 +18,7 @@
     .play {
       position: absolute;
       top: 30%;
+      //border: 3px solid blue;
       cursor: pointer;
       i {
         @include gradientText;
@@ -22,3 +27,16 @@
     }
   }
 }
+
+// NOTE: Just position absolute alone will take an element out of document flow, even before you start applying offset values
+
+// Align-item center and position absolute will make an element not start from the top left corner when taken out of normal document flow
+
+// To target a class together with its element, don't leave a space
+// button.btn {} instead of button .btn {}
+// The former is <button class = "btn"></button>
+// The latter is <button><div class = "btn"></div></button>
+
+// Object-fit : cover must go with a specified width and height, its like cropping
+
+// NOTE: A flex item and even container like (.container, .image) will grow in height or width based on height or width of its content, unless they are given a specified height
